@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Academy Uganda</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap-3.4.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="jquery_3.3.1/jquery.js"></script>
+  <script src="bootstrap-3.4.1/dist/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#myPage">Code Academy Uganda</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="Index.html">ABOUT</a></li>
+              <li><a href="services.html">SERVICES</a></li>
+              <li><a href="portfolio.html">PORTFOLIO</a></li>
+              <li><a href="pricing.html">PRICING</a></li>
+              <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="jumbotron text-center">
+        <h1>OUR SERVICES</h1> 
+        <p>What we offer...</p> 
+        <span class="glyphicon glyphicon-gift logo-small" style="color: white;"></span>
+        
+      </div>
+    <!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+    
+    <!--<h4>What we offer</h4>-->
+    <br>
+    <div class="row slideanim">
+      <div class="col-sm-6">
+        <span class="glyphicon glyphicon-retweet logo-small"></span>
+        <h4>INNOVATION</h4>
+        <p>We offer the necessary skills needed for one to start an ICT career right from the basics.</p>
+      </div>
+      <div class="col-sm-6">
+        <span class="glyphicon glyphicon-cog logo-small"></span>
+        <h4>CREATIVITY</h4>
+        <p>We keep our students in check and direction through out their learning prosess</p>
+      </div>
+      <!--
+      <div class="col-sm-6">
+        <span class="glyphicon glyphicon-briefcase logo-small"></span>
+        <h4>CAREER GUIDANCE</h4>
+        <p>Given the fact that ICT is a wide indistry, we offer the necessary guidance for our students depending on the areas that they find more comfortable </p>
+      </div>
+    -->
+    </div>
+    <br><br>
+    <div class="row slideanim">
+      <div class="col-sm-6">
+        <span class="glyphicon glyphicon-thumbs-up logo-small"></span>
+        <h4>EXCELLENCE</h4>
+        <p>We use available technologies to in order to boost creativity</p>
+      </div>
+      
+      <div class="col-sm-6">
+        <span class="glyphicon glyphicon-globe logo-small"></span>
+        <h4>SERVICE BEYOND SELF</h4>
+        <p>We offer Nationaly recognized certification to all our learners</p>
+      </div>
+      <!--
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-wrench logo-small"></span>
+        <h4 style="color:#303030;">DEVELOPMENT</h4>
+        <p>We also develop software including Desktop and Mobile amd Web Apps, ERP's, and many more </p>
+      </div>
+    -->
+    </div>
+  </div>
+  <footer class="container-fluid text-center">
+    <a href="#myPage" title="To Top">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+    <p>Developed by, <a href="Index.html" title="code academy Uganda">Code academy uganda</a></p>
+  </footer>
+
+  <script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links in navbar + footer link
+      $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+    
+          // Store hash
+          var hash = this.hash;
+    
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function(){
+       
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+      
+      $(window).scroll(function() {
+        $(".slideanim").each(function(){
+          var pos = $(this).offset().top;
+    
+          var winTop = $(window).scrollTop();
+            if (pos < winTop + 600) {
+              $(this).addClass("slide");
+            }
+        });
+      });
+    })
+    </script>
+    
+    
+</body>
+</html>
+
+

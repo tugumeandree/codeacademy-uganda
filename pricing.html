@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Academy Uganda</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap-3.4.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="jquery_3.3.1/jquery.js"></script>
+    <script src="bootstrap-3.4.1/dist/js/bootstrap.min.js"></script>
+
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#myPage">Code Academy Uganda</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="Index.html">ABOUT</a></li>
+              <li><a href="services.html">SERVICES</a></li>
+              <li><a href="portfolio.html">PORTFOLIO</a></li>
+              <li><a href="pricing.html">PRICING</a></li>
+              <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <div class="jumbotron text-center">
+      <h1>PRICING</h1> 
+      <p>Choose a payment plan that works for you...</p> 
+      <span class="glyphicon glyphicon-usd logo-small" style="color: white;"></span>
+    </div>
+
+    <div id="pricing" class="container-fluid">
+        <div class="text-center">
+          
+        </div>
+        <div class="row slideanim">
+          <div class="col-sm-4 col-xs-12">
+            <div class="panel panel-default text-center">
+              <div class="panel-heading">
+                <h1>Code school</h1>
+              </div>
+              <div class="panel-body">
+                <p><strong>1</strong> Introduction to programming</p>
+                <p><strong>2</strong> Establishement of code clubs</p>
+                <p><strong>3</strong> Monitering of progress</p>
+                <p><strong>4</strong> Allocation of projects</p>
+                <p><strong>5</strong> Certification</p>
+              </div>
+              <div class="panel-footer">
+                <h3>Free</h3>
+                <h4>per school</h4>
+                <button class="btn btn-lg">Sign Up</button>
+              </div>
+            </div>      
+          </div>     
+          <div class="col-sm-4 col-xs-12">
+            <div class="panel panel-default text-center">
+              <div class="panel-heading">
+                <h1>Code camps</h1>
+              </div>
+              <div class="panel-body">
+                <p><strong>1</strong> Scratch beginner's class</p>
+                <p><strong>2</strong> Scratch intermediate class </p>
+                <p><strong>3</strong> Scratch advanced class</p>
+                <p><strong>4</strong> Weekend class</p>
+                <p><strong>5</strong> Certification</p>
+              </div>
+              <div class="panel-footer">
+                <h3>300,000 UGX</h3>
+                <h4>for the current camp</h4>
+                <button class="btn btn-lg">Sign Up</button>
+              </div>
+            </div>      
+          </div>       
+          <div class="col-sm-4 col-xs-12">
+            <div class="panel panel-default text-center">
+              <div class="panel-heading">
+                <h1>Code equip</h1>
+              </div>
+              <div class="panel-body">
+                <p><strong>1</strong> Introduction to programming</p>
+                <p><strong>2</strong> Hand-on experience </p>
+                <p><strong>3</strong> Allocation of traainers</p>
+                <p><strong>4</strong> Project development</p>
+                <p><strong>5</strong> Certification</p>
+              </div>
+              <div class="panel-footer">
+                <h3>600,000 UGX</h3>
+                <h4>For current course</h4>
+                <button class="btn btn-lg">Sign Up</button>
+              </div>
+            </div>      
+          </div>    
+        </div>
+    </div>
+    <footer class="container-fluid text-center">
+        <a href="#myPage" title="To Top">
+          <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+        <p>Developed by, <a href="Index.html" title="code academy Uganda">Code academy uganda</a></p>
+    </footer>
+
+    <script>
+        $(document).ready(function(){
+          // Add smooth scrolling to all links in navbar + footer link
+          $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+        
+              // Store hash
+              var hash = this.hash;
+        
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 900, function(){
+           
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+          
+          $(window).scroll(function() {
+            $(".slideanim").each(function(){
+              var pos = $(this).offset().top;
+        
+              var winTop = $(window).scrollTop();
+                if (pos < winTop + 600) {
+                  $(this).addClass("slide");
+                }
+            });
+          });
+        })
+    </script>
+        
+    
+</body>
+</html>
